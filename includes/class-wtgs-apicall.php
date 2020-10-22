@@ -1,5 +1,5 @@
 <?php
-class Wtgs_APICall {
+class WTGS_APICall {
 	private $method;
 	private $url;
 	private $data;
