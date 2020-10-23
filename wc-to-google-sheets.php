@@ -16,6 +16,3 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wtgs-wc-order-details.php'
 require plugin_dir_path ( __FILE__ ) . 'includes/class-wtgs-apicall.php';
 
 $order_data = new WTGS_WC_Order_Details();
-
-// require_once plugin_dir_path ( __FILE__ ) . 'includes/class-wtgs-apicall.php';
-// $zapier = new Wtgs_APICall();
