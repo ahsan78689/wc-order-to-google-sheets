@@ -6,7 +6,7 @@ class WTGS_APICall {
 
 	public function __construct() {
 		$this->method = 'POST';
-		$this->url = 'https://hooks.zapier.com/hooks/catch/1954644/oq4cdg7/';
+		$this->url = 'https://script.google.com/macros/s/AKfycbzsVI2wKASxYI17HO7paR08QgMH-NEoy3Pb9MOKhQzO-fBuSIE/exec';
 	}
 
 	private function call( $method, $url, $data ){
@@ -14,10 +14,9 @@ class WTGS_APICall {
 			return false;
 		}
 
-		// $ssl_certi = 'C:\Users\MSI\Local Sites\uptekdemotest\cacert.pem';
 		$curl = curl_init();
 		curl_setopt_array($curl, array(
-			CURLOPT_URL => "https://hooks.zapier.com/hooks/catch/1954644/oq4cdg7",
+			CURLOPT_URL => $url,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => "",
 			CURLOPT_MAXREDIRS => 10,
@@ -26,20 +25,22 @@ class WTGS_APICall {
 			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 			CURLOPT_CUSTOMREQUEST => "POST",
 			CURLOPT_POSTFIELDS => $data,
-			// CURLOPT_CAINFO, $ssl_certi,
-			// CURLOPT_CAPATH, $ssl_certi,
 			CURLOPT_HTTPHEADER => array(
-			"Content-Type: application/x-www-form-urlencoded"
+			"Content-Type: application/json"
 			),
 		));
 
 		$result = curl_exec($curl);
+
 		if($result === false) {
 		    echo 'Curl error: ' . curl_error($curl);
 		} else {
 		    echo 'Operation completed without any errors';
+		    var_dump($result);
 		}
 		curl_close($curl);
+
+		
 		return $result;
 	}
 

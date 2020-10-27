@@ -10,7 +10,7 @@ class WTGS_WC_Order_Details {
 		/**
 		 * Hook for testing data
 		 */
-		// add_action('woocommerce_thankyou', array( $this, 'process_wc_order') );
+		add_action('woocommerce_thankyou', array( $this, 'process_wc_order') );
 	}
 
 	public function process_wc_order($order_id) {
