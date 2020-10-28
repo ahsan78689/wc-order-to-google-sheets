@@ -124,44 +124,6 @@ $token = $googleSheet->wtgs_getAccessToken($code);
 if (!$token) {
 	echo 'AuthCode Error';
 } else {
-	// $status = true;
-	// $google_spreadsheets_return = wp_remote_get("https://www.googleapis.com/drive/v3/files?q=mimeType%20%3D%20'application%2Fvnd.google-apps.spreadsheet'
- //         &access_token=".$token);
-
-	// $response = json_decode($google_spreadsheets_return['body']);
-
-	// $selectBox='<select id="documentID" style="width: 100%; max-width: none">';
-
- //    if(empty($response->files)){  
- //    	echo '1';
- //      return False;
- //    }
- //    $selectBox.= "<option  value=''></option> "    ;
- //    foreach ($response->files as $key => $value) {
-
-
-
- //      if($value->id == $selectedItem){
- //        $selectBox.= "<option selected value='". $value->id ."'>". $value->name ."</option> "    ;
-
- //      }
- //      else{
- //        $selectBox.= "<option value='". $value->id ."'>". $value->name ."</option> "    ;
- //      }
-      
-     
-      
- //    }
- //    $selectBox.="</select>";
-
- //    if($google_spreadsheets_return['response']['code'] != 200){
-    
- //      $selectBox = $google_spreadsheets_return['response']['message'];
- //      $status=false;
-      
- //    }
-
- //    echo $selectBox;
 
 }
 
